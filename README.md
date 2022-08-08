@@ -35,3 +35,7 @@ You will also see any lint errors in the console.
 Link:
 
 ### https://e-commerce-project-challenge.herokuapp.com
+
+or
+
+### https://e-commerce-project-challenge.netlify.app
