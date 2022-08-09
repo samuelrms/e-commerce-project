@@ -34,10 +34,10 @@ You will also see any lint errors in the console.
 
 Link:
 
-### https://e-commerce-project-challenge.herokuapp.com
-
-or
-
 ### https://e-commerce-project-challenge.netlify.app
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/da62b876-e4f2-4852-a91f-99b18ef7bc1f/deploy-status)](https://app.netlify.com/sites/e-commerce-project-challenge/deploys)
+
+or
+
+### https://e-commerce-project-challenge.herokuapp.com
