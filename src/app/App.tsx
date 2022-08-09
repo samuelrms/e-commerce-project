@@ -1,5 +1,10 @@
 import React from "react";
+import { AppRoutes } from "./routes/App.routes";
 
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <AppRoutes />
+    </>
+  );
 };
