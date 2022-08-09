@@ -1,5 +1,6 @@
-import React from "react";
+import { IButtonDefault } from "../../interface";
+import { DefaultButton } from "./styled";
 
-export const Button = () => {
-  return <div>Button</div>;
+export const Button = ({ children }: IButtonDefault) => {
+  return <DefaultButton>{children}</DefaultButton>;
 };
