@@ -30,14 +30,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-## Project hosted on Heroku and Netlify
+## Project hosted on Heroku
 
 Link:
-
-### https://e-commerce-project-challenge.netlify.app
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/da62b876-e4f2-4852-a91f-99b18ef7bc1f/deploy-status)](https://app.netlify.com/sites/e-commerce-project-challenge/deploys)
-
-or
 
 ### https://e-commerce-project-challenge.herokuapp.com
