@@ -1,10 +1,12 @@
-import React from "react";
-import { AppRoutes } from "./routes/App.routes";
+import { AssemblyApp } from "./AssemblyApp/AssemblyApp";
+import { GlobalContext } from "./shared/context/GlobalContext";
+import { GlobalStyle } from "./styles";
 
 export const App = () => {
   return (
-    <>
-      <AppRoutes />
-    </>
+    <GlobalContext>
+      <GlobalStyle />
+      <AssemblyApp />
+    </GlobalContext>
   );
 };

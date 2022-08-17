@@ -5,9 +5,11 @@ declare module "styled-components" {
     name: string;
     colors: {
       primary: string;
-      secondary: string;
       tertiary: string;
       footer: string;
+      header: string;
+      header_secondary: string;
+      close_accessibility: string;
       text: string;
       textSecondary: string;
       textGray: string;

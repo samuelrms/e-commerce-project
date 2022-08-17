@@ -1,5 +1,5 @@
-import React from "react";
+import { ContainerError } from "./styled";
 
 export const Error = () => {
-  return <div>Error</div>;
+  return <ContainerError>Error</ContainerError>;
 };

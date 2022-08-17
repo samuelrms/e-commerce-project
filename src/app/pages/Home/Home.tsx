@@ -1,5 +1,5 @@
-import React from "react";
+import { ContainerHome } from "./styled";
 
 export const Home = () => {
-  return <div>Home</div>;
+  return <ContainerHome>Home</ContainerHome>;
 };

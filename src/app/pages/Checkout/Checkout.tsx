@@ -1,5 +1,5 @@
-import React from "react";
+import { ContainerCheckout } from "./styled";
 
 export const Checkout = () => {
-  return <div>Checkout</div>;
+  return <ContainerCheckout>Checkout</ContainerCheckout>;
 };
