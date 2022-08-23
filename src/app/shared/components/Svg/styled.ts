@@ -5,9 +5,9 @@ interface IContainerSvg {
 }
 
 export const ContainerSvg = styled.img<IContainerSvg>`
-  max-width: 100%;
-  max-height: 100%;
-  width: ${({ width }) => width || 40}px;
-  height: ${({ height }) => height || 40}px;
   padding: ${({ padding }) => padding || 0}px;
+  height: ${({ height }) => height || 40}px;
+  width: ${({ width }) => width || 40}px;
+  max-height: 100%;
+  max-width: 100%;
 `;

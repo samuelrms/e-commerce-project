@@ -1,4 +1,3 @@
-import React from "react";
 import { IContainerDefault } from "../../interface";
 import { DefaultContainer } from "./styled";
 

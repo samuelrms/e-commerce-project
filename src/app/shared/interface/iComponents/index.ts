@@ -17,6 +17,7 @@ export interface IButtonDefault
   children: React.ReactNode;
 }
 
+// Interface ISvg Default
 export interface ISvg
   extends Omit<HTMLAttributes<HTMLImageElement>, "children"> {
   src: string;

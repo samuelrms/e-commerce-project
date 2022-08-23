@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import { AppRoutes } from "../routes/App.routes";
 import { ValueGlobalContext } from "../shared/context/GlobalContext";
-import { darkTheme, GlobalStyle, lightTheme } from "../styles";
+import { Body, darkTheme, GlobalStyle, lightTheme } from "../styles";
 
 export const AssemblyApp = () => {
   const { toggle } = useContext(ValueGlobalContext);
@@ -10,7 +10,9 @@ export const AssemblyApp = () => {
   return (
     <ThemeProvider theme={toggle ? lightTheme : darkTheme}>
       <GlobalStyle />
-      <AppRoutes />
+      <Body>
+        <AppRoutes />
+      </Body>
     </ThemeProvider>
   );
 };
