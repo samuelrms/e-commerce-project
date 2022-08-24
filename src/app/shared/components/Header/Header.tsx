@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { cart, dark, cartLight } from "../../assets";
 import { ValueGlobalContext } from "../../context/GlobalContext";
@@ -16,17 +16,26 @@ import {
   TotalItemsCart,
 } from "./styled";
 import {
+  accessibilityIconDark,
+  accessibilityIconLight,
   darkBigFont,
   darkSmallFont,
   light,
   lightBigFont,
   lightSmallFont,
 } from "./../../assets/svg";
+import { useOnClickOutside } from "../../hooks";
 
 export const Header = () => {
   const { handleToggleTheme, toggle, products } =
     useContext(ValueGlobalContext);
   const [accessibility, setAccessibility] = useState<boolean>(false);
+
+  const isAccessibilityRef = useRef<HTMLDivElement>(null);
+
+  useOnClickOutside<HTMLDivElement>(isAccessibilityRef, () =>
+    setAccessibility(!accessibility),
+  );
 
   const handleClickAccessibility = () => {
     setAccessibility(!accessibility);
@@ -38,44 +47,39 @@ export const Header = () => {
       <BuyCart>
         <Link to="/checkout">
           {products > 0 && <TotalItemsCart>{products}</TotalItemsCart>}
-          {toggle && (
-            <Svg src={cartLight} alt="Carrinho de compras para tema light" />
-          )}
-          {!toggle && (
-            <Svg src={cart} alt="Carrinho de compras para tema dark" />
-          )}
+          <Svg src={toggle ? cartLight : cart} alt="Carrinho de compras" />
         </Link>
       </BuyCart>
       <Accessibility isClose={accessibility} onClick={handleClickAccessibility}>
-        {""}
+        <Svg
+          src={toggle ? accessibilityIconLight : accessibilityIconDark}
+          alt="Icon de acessibilidade"
+        />
       </Accessibility>
       {accessibility && (
-        <ContentAccessibility>
+        <ContentAccessibility ref={isAccessibilityRef}>
           <ToggleSmallFont>
-            {!toggle && (
-              <Svg width={20} src={darkSmallFont} alt="Aumentar fonte dark" />
-            )}
-            {toggle && (
-              <Svg width={20} src={lightSmallFont} alt="Aumentar fonte light" />
-            )}
+            <Svg
+              width={20}
+              src={toggle ? lightSmallFont : darkSmallFont}
+              alt="Aumentar fonte"
+            />
           </ToggleSmallFont>
           <ToggleTheme onClick={handleToggleTheme}>
-            {!toggle && <Svg src={dark} alt="Luz para tema dark" />}
-            {toggle && <Svg src={light} alt="Luz para tema light" />}
+            <Svg src={toggle ? light : dark} alt="Icon de luz para theme" />
           </ToggleTheme>
           <ToggleBigFont>
-            {!toggle && (
-              <Svg width={30} src={darkBigFont} alt="Diminuir fonte dark" />
-            )}
-            {toggle && (
-              <Svg width={30} src={lightBigFont} alt="Diminuir fonte light" />
-            )}
+            <Svg
+              width={30}
+              src={toggle ? lightBigFont : darkBigFont}
+              alt="Diminuir fonte"
+            />
           </ToggleBigFont>
           <CloseAccessibility
             isClose={accessibility}
             onClick={handleClickAccessibility}
           >
-            {""}
+            X
           </CloseAccessibility>
         </ContentAccessibility>
       )}

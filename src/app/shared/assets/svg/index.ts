@@ -1,19 +1,24 @@
-import buyCartLight from "./cart.svg";
-import buyCartDark from "./cartDark.svg";
-import themeDark from "./themeDark.svg";
-import themeLight from "./themeLight.svg";
-import bigFontLight from "./font-size-big-light.svg";
-import smallFontLight from "./font-size-small-light.svg";
-import bigFont from "./font-size-big.svg";
-import smallFont from "./font-size-small.svg";
+import smallFontLight from "./svgs/font-size-small-light.svg";
+import bigFontLight from "./svgs/font-size-big-light.svg";
+import smallFont from "./svgs/font-size-small.svg";
+import themeLight from "./svgs/themeLight.svg";
+import bigFont from "./svgs/font-size-big.svg";
+import buyCartDark from "./svgs/cartDark.svg";
+import themeDark from "./svgs/themeDark.svg";
+import buyCartLight from "./svgs/cart.svg";
+import iconDarkAccessibility from "./svgs/accessibility-icon.svg";
+import iconLightAccessibility from "./svgs/accessibility-icon-light.svg";
 
-export const cart = buyCartLight;
 export const cartLight = buyCartDark;
+export const cart = buyCartLight;
 
-export const dark = themeDark;
 export const light = themeLight;
+export const dark = themeDark;
 
-export const darkBigFont = bigFont;
-export const darkSmallFont = smallFont;
-export const lightBigFont = bigFontLight;
 export const lightSmallFont = smallFontLight;
+export const lightBigFont = bigFontLight;
+export const darkSmallFont = smallFont;
+export const darkBigFont = bigFont;
+
+export const accessibilityIconDark = iconDarkAccessibility;
+export const accessibilityIconLight = iconLightAccessibility;

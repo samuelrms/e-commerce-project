@@ -30,7 +30,7 @@ export const Accessibility = styled(Content)<IsClose>`
   top: 0;
 `;
 
-export const ContentAccessibility = styled(Content)`
+export const ContentAccessibility = styled.div`
   background: ${({ theme }) => theme.colors.header_secondary};
   transform: translate(-50%, -50%);
   justify-content: space-around;
@@ -57,8 +57,13 @@ export const ContentAccessibility = styled(Content)`
 
 export const CloseAccessibility = styled(Button)<IsClose>`
   background: ${({ isClose }) => (isClose ? "#FF1F3D" : "#04DB31")};
+  color: ${({ theme }) => theme.colors.text};
   border-radius: 0 15px 0 50px;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  font-weight: bold;
+  display: flex;
   height: 30px;
   width: 30px;
   right: 0;

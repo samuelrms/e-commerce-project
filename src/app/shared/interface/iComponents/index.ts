@@ -9,6 +9,7 @@ export interface IContainerDefault {
 export interface IContentDefault
   extends Omit<HTMLAttributes<HTMLDivElement>, "children"> {
   children: React.ReactNode;
+  ref?: any;
 }
 
 // Interface Button Default

@@ -19,9 +19,10 @@ body{
 export const Body = styled.section`
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.text};
-  width: 100vw;
-  overflow-x: hidden;
+  font-size: calc(1 * 100%);
   font-family: system-ui, sans-serif;
-  display: flex;
   justify-content: center;
+  overflow-x: hidden;
+  display: flex;
+  width: 100vw;
 `;
