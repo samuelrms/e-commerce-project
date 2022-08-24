@@ -10,10 +10,18 @@ import {
   ContainerHeader,
   ContentAccessibility,
   TitleHeader,
+  ToggleBigFont,
+  ToggleSmallFont,
   ToggleTheme,
   TotalItemsCart,
 } from "./styled";
-import { light } from "./../../assets/svg/index";
+import {
+  darkBigFont,
+  darkSmallFont,
+  light,
+  lightBigFont,
+  lightSmallFont,
+} from "./../../assets/svg";
 
 export const Header = () => {
   const { handleToggleTheme, toggle, products } =
@@ -43,10 +51,26 @@ export const Header = () => {
       </Accessibility>
       {accessibility && (
         <ContentAccessibility>
+          <ToggleSmallFont>
+            {!toggle && (
+              <Svg width={20} src={darkSmallFont} alt="Aumentar fonte dark" />
+            )}
+            {toggle && (
+              <Svg width={20} src={lightSmallFont} alt="Aumentar fonte light" />
+            )}
+          </ToggleSmallFont>
           <ToggleTheme onClick={handleToggleTheme}>
             {!toggle && <Svg src={dark} alt="Luz para tema dark" />}
             {toggle && <Svg src={light} alt="Luz para tema light" />}
           </ToggleTheme>
+          <ToggleBigFont>
+            {!toggle && (
+              <Svg width={30} src={darkBigFont} alt="Diminuir fonte dark" />
+            )}
+            {toggle && (
+              <Svg width={30} src={lightBigFont} alt="Diminuir fonte light" />
+            )}
+          </ToggleBigFont>
           <CloseAccessibility
             isClose={accessibility}
             onClick={handleClickAccessibility}

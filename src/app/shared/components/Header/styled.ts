@@ -33,13 +33,13 @@ export const Accessibility = styled(Content)<IsClose>`
 export const ContentAccessibility = styled(Content)`
   background: ${({ theme }) => theme.colors.header_secondary};
   transform: translate(-50%, -50%);
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border-radius: 10px;
   position: absolute;
   display: flex;
   height: 75%;
-  width: 75%;
+  width: 79%;
   bottom: 0;
   left: 50%;
   top: 50%;
@@ -87,3 +87,7 @@ export const TotalItemsCart = styled.p`
 `;
 
 export const ToggleTheme = styled(Button)``;
+
+export const ToggleBigFont = styled(Button)``;
+
+export const ToggleSmallFont = styled(Button)``;
